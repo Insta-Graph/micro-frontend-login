@@ -1,39 +1,34 @@
 import '@fontsource/roboto';
 
-import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
+import React, { Suspense } from 'react';
+
 import { ThemeProvider as MaterialThemeProvider } from '@mui/material';
+import { Router } from '@reach/router';
 import {
-  AuthLayout,
   ThemeProvider,
   createCustomTheme,
-  AuthProvider,
+  ApolloProvider,
+  apolloClient,
+  Loader,
 } from '@snapify/shared-modules';
 
-import AuthLogin from './components/AuthLogin';
-import CardFooter from './components/CardFooter';
-
-const accessToken = '';
-
-const client = new ApolloClient({
-  uri: 'http://localhost:3000/graphql',
-  cache: new InMemoryCache(),
-  credentials: 'include',
-  headers: { authorization: accessToken ? `Bearer ${accessToken}` : '' },
-});
+const Login = React.lazy(() => import('./components/login'));
+const Register = React.lazy(() => import('./components/register'));
 
 const Root: React.FC = () => {
   return (
-    <ApolloProvider client={client}>
-      <MaterialThemeProvider theme={createCustomTheme()}>
-        <ThemeProvider>
-          <AuthProvider protectedRoute>
-            <AuthLayout cardFooter={<CardFooter />}>
-              <AuthLogin />
-            </AuthLayout>
-          </AuthProvider>
-        </ThemeProvider>
-      </MaterialThemeProvider>
-    </ApolloProvider>
+    <Router basepath="/auth">
+      <ApolloProvider client={apolloClient}>
+        <MaterialThemeProvider theme={createCustomTheme()}>
+          <ThemeProvider>
+            <Suspense fallback={<Loader />}>
+              <Login path="/sign-in" />
+              <Register path="/sign-up" />
+            </Suspense>
+          </ThemeProvider>
+        </MaterialThemeProvider>
+      </ApolloProvider>
+    </Router>
   );
 };
 

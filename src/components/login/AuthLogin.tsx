@@ -17,11 +17,9 @@ import {
 import type { SxProps, Theme } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import { navigate, Link } from '@reach/router';
-import { GoogleLogo, PasswordField } from '@snapify/shared-modules';
+import { GoogleLogo, PasswordField, useLoginMutation, authService } from '@snapify/shared-modules';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
-
-import { useLoginMutation } from '../generated/graphql';
 
 const AuthRegister: React.VFC = () => {
   const theme = useTheme();
@@ -115,7 +113,9 @@ const AuthRegister: React.VFC = () => {
             },
           });
           if (response.data?.login.__typename === 'AuthData') {
-            navigate('/');
+            authService.setAccessToken(response.data.login.auth.accessToken);
+            authService.setAccessTokenExpiration(response.data.login.auth.expiresIn);
+            navigate('/profile');
           }
           if (checked) {
             window.localStorage.setItem('email', values.email);
@@ -153,7 +153,6 @@ const AuthRegister: React.VFC = () => {
               label="Password"
               currentValue={values.password}
               passwordError={errors.password}
-              // @ts-ignore
               passwordTouched={touched.password}
               handleBlur={handleBlur}
               handleChange={handleChange}
