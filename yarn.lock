@@ -2256,10 +2256,10 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@snapify/shared-modules@^1.5.0":
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/@snapify/shared-modules/-/shared-modules-1.5.0.tgz#ee30f3c37e1ca5bac6f09904044774a1dfc6018b"
-  integrity sha512-QFM6X3J968R5ZcZFTLaFiyy+uh3Vqk1pSwXrP8yB83tHifhdP/1Y4WITgAU43T6rVM1B04ZgMKjm2PWSA0Owew==
+"@snapify/shared-modules@^1.6.0":
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/@snapify/shared-modules/-/shared-modules-1.6.0.tgz#285e384bd9898fbee5cdc6ebe98d9b2ee1f78d4c"
+  integrity sha512-sstTc5HpTK3HWL9ORdYuhXmZNhwvRQD6svK6SoQNunjmWf+OY4av6dVm8YIu315noc3hs0J8m/Go33ksZJxDnw==
   dependencies:
     "@apollo/client" "^3.6.9"
     "@emotion/react" "^11.10.0"
@@ -2271,6 +2271,7 @@
     "@types/jest" "^27.0.1"
     "@types/systemjs" "^6.1.1"
     "@types/webpack-env" "^1.16.2"
+    cross-fetch "^3.1.5"
     graphql "^16.6.0"
     react "^17.0.2"
     react-dom "^17.0.2"
@@ -4114,6 +4115,13 @@ cross-env@^7.0.3:
   integrity sha512-+/HKd6EgcQCJGh2PSjZuUitQBQynKor4wrFbRg4DtAgS1aWO+gU52xpH7M9ScGgXSYmAVS9bIJ8EzuaGw0oNAw==
   dependencies:
     cross-spawn "^7.0.1"
+
+cross-fetch@^3.1.5:
+  version "3.1.5"
+  resolved "https://registry.yarnpkg.com/cross-fetch/-/cross-fetch-3.1.5.tgz#e1389f44d9e7ba767907f7af8454787952ab534f"
+  integrity sha512-lvb1SBsI0Z7GDwmuid+mU3kWVBwTVUbe7S0H52yaaAdQOXq2YktTCZdlAcNKFzE6QtRz0snpw9bNiPeOIkkQvw==
+  dependencies:
+    node-fetch "2.6.7"
 
 cross-spawn@^7.0.0, cross-spawn@^7.0.1, cross-spawn@^7.0.2, cross-spawn@^7.0.3:
   version "7.0.3"
@@ -7574,7 +7582,7 @@ node-emoji@^1.11.0:
   dependencies:
     lodash "^4.17.21"
 
-node-fetch@^2.6.7:
+node-fetch@2.6.7, node-fetch@^2.6.7:
   version "2.6.7"
   resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.7.tgz#24de9fba827e3b4ae44dc8b20256a379160052ad"
   integrity sha512-ZjMPFEfVx5j+y2yF35Kzx5sF7kDzxuDj6ziH4FFbOp87zKDZNx8yExJIb05OGF4Nlt9IHFIMBkRl41VdvcNdbQ==

@@ -1,5 +1,3 @@
-import '@fontsource/roboto';
-
 import React, { Suspense } from 'react';
 
 import { ThemeProvider as MaterialThemeProvider } from '@mui/material';
@@ -17,18 +15,18 @@ const Register = React.lazy(() => import('./components/register'));
 
 const Root: React.FC = () => {
   return (
-    <Router basepath="/auth">
-      <ApolloProvider client={apolloClient}>
-        <MaterialThemeProvider theme={createCustomTheme()}>
-          <ThemeProvider>
-            <Suspense fallback={<Loader />}>
+    <ApolloProvider client={apolloClient}>
+      <MaterialThemeProvider theme={createCustomTheme()}>
+        <ThemeProvider>
+          <Suspense fallback={<Loader />}>
+            <Router basepath="/auth">
               <Login path="/sign-in" />
               <Register path="/sign-up" />
-            </Suspense>
-          </ThemeProvider>
-        </MaterialThemeProvider>
-      </ApolloProvider>
-    </Router>
+            </Router>
+          </Suspense>
+        </ThemeProvider>
+      </MaterialThemeProvider>
+    </ApolloProvider>
   );
 };
 
