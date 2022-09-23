@@ -1,0 +1,7 @@
+query GetPosts {
+  getPosts {
+    _id
+    title
+    text
+  }
+}

@@ -13,7 +13,7 @@
     "noUnusedParameters": true,
     "forceConsistentCasingInFileNames": true
   },
-  "files": ["src/project-micro-frontend-name.tsx"],
+  "files": ["src/snapify-mf-login.tsx"],
   "include": ["src/**/*"],
   "exclude": ["node_modules"]
 }
