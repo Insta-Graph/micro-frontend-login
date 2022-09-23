@@ -115,6 +115,8 @@ const AuthRegister: React.VFC = () => {
           if (response.data?.login.__typename === 'AuthData') {
             authService.setAccessToken(response.data.login.auth.accessToken);
             authService.setAccessTokenExpiration(response.data.login.auth.expiresIn);
+            authService.setUser(response.data.login.user);
+            localStorage.setItem('userData', JSON.stringify(response.data.login.user));
             navigate('/profile');
           }
           if (checked) {

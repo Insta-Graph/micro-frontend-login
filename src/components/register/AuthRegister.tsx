@@ -120,6 +120,8 @@ const AuthRegister: React.FC = () => {
           if (response.data?.registerUser.__typename === 'AuthData') {
             authService.setAccessToken(response.data.registerUser.auth.accessToken);
             authService.setAccessTokenExpiration(response.data.registerUser.auth.expiresIn);
+            authService.setUser(response.data.registerUser.user);
+            localStorage.setItem('userData', JSON.stringify(response.data.registerUser.user));
             navigate('/');
           }
         }}
