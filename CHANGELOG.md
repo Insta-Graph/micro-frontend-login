@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/Insta-Graph/micro-frontend-login/compare/v1.1.0...v1.1.1) (2022-09-23)
+
+
+### Bug Fixes
+
+* wrap components in Router to avoid reach router error ([c95457a](https://github.com/Insta-Graph/micro-frontend-login/commit/c95457a1da574adb530a4159caa1e21f7306d918))
+
 # [1.1.0](https://github.com/Insta-Graph/micro-frontend-login/compare/v1.0.0...v1.1.0) (2022-09-23)
 
 
