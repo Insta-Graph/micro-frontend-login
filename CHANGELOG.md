@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/Insta-Graph/micro-frontend-login/compare/v1.1.1...v1.1.2) (2022-09-23)
+
+
+### Bug Fixes
+
+* save user data at auth service and local storage ([7a54037](https://github.com/Insta-Graph/micro-frontend-login/commit/7a54037cd719f46caa41b86f4d19d82d161be79c))
+
 ## [1.1.1](https://github.com/Insta-Graph/micro-frontend-login/compare/v1.1.0...v1.1.1) (2022-09-23)
 
 
