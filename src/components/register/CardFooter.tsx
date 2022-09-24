@@ -5,7 +5,7 @@ import { Link } from '@reach/router';
 
 const CardFooter: React.FC = () => {
   return (
-    <Link to="/sign-in" style={{ textDecoration: 'none' }}>
+    <Link to="/auth/sign-in" style={{ textDecoration: 'none' }}>
       <Typography variant="subtitle1" sx={{ textDecoration: 'none', cursor: 'pointer' }}>
         Already have an account?
       </Typography>

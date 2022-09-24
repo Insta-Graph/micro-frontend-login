@@ -1,7 +1,7 @@
 import React, { Suspense } from 'react';
 
 import { ThemeProvider as MaterialThemeProvider } from '@mui/material';
-import { Router } from '@reach/router';
+import { Router, Redirect } from '@reach/router';
 import {
   ThemeProvider,
   createCustomTheme,
@@ -20,6 +20,7 @@ const Root: React.FC = () => {
         <ThemeProvider>
           <Suspense fallback={<Loader />}>
             <Router basepath="/auth">
+              <Redirect from="/" to="/auth/sign-in" />
               <Login path="/sign-in" />
               <Register path="/sign-up" />
             </Router>
