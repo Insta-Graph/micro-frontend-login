@@ -2,20 +2,14 @@ import React, { Suspense } from 'react';
 
 import { ThemeProvider as MaterialThemeProvider } from '@mui/material';
 import { Router, Redirect } from '@reach/router';
-import {
-  ThemeProvider,
-  createCustomTheme,
-  ApolloProvider,
-  getApolloClient,
-  Loader,
-} from '@snapify/shared-modules';
+import { ThemeProvider, createCustomTheme, ApolloProvider, Loader } from '@snapify/shared-modules';
 
 const Login = React.lazy(() => import('./components/login'));
 const Register = React.lazy(() => import('./components/register'));
 
 const Root: React.FC = () => {
   return (
-    <ApolloProvider client={getApolloClient()}>
+    <ApolloProvider>
       <MaterialThemeProvider theme={createCustomTheme()}>
         <ThemeProvider>
           <Suspense fallback={<Loader />}>
