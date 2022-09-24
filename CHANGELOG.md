@@ -1,3 +1,10 @@
+## [1.1.3](https://github.com/Insta-Graph/micro-frontend-login/compare/v1.1.2...v1.1.3) (2022-09-24)
+
+
+### Bug Fixes
+
+* solve bad redirect urls ([80d621a](https://github.com/Insta-Graph/micro-frontend-login/commit/80d621a8395dcd34e5142654fa2c69f3730312e7))
+
 ## [1.1.2](https://github.com/Insta-Graph/micro-frontend-login/compare/v1.1.1...v1.1.2) (2022-09-23)
 
 
