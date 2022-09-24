@@ -1,3 +1,10 @@
+## [1.1.5](https://github.com/Insta-Graph/micro-frontend-login/compare/v1.1.4...v1.1.5) (2022-09-24)
+
+
+### Bug Fixes
+
+* redirect to feed route on success login ([e4afc13](https://github.com/Insta-Graph/micro-frontend-login/commit/e4afc13a7a4cd27786f7e8de8fe62e332c0509f6))
+
 ## [1.1.4](https://github.com/Insta-Graph/micro-frontend-login/compare/v1.1.3...v1.1.4) (2022-09-24)
 
 
