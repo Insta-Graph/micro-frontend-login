@@ -2256,10 +2256,10 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@snapify/shared-modules@^1.7.0":
-  version "1.7.0"
-  resolved "https://registry.yarnpkg.com/@snapify/shared-modules/-/shared-modules-1.7.0.tgz#b94df483699f4ebae2537f2d7e9dc29a012a6603"
-  integrity sha512-onFwYJzbEA0BNy3ixUATAsjvlUA2FdXB6cM08ocE57WbSu52jPziJ7uij7prMLFXu6RpkvOTHLKdT0t8GcSsow==
+"@snapify/shared-modules@^1.7.2":
+  version "1.7.2"
+  resolved "https://registry.yarnpkg.com/@snapify/shared-modules/-/shared-modules-1.7.2.tgz#86797f80f14787c009406e369489d454aa59f371"
+  integrity sha512-sbMyOpN8xEGo0Zb3/ytttdnxgA9DD9/g/azA9s/JIWqTAy0K8sAf8t1lJ+rxh/Ttjlq+DWF1s74Mj4klXSAZSg==
   dependencies:
     "@apollo/client" "^3.6.9"
     "@emotion/react" "^11.10.0"

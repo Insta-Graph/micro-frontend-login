@@ -6,7 +6,7 @@ import {
   ThemeProvider,
   createCustomTheme,
   ApolloProvider,
-  apolloClient,
+  getApolloClient,
   Loader,
 } from '@snapify/shared-modules';
 
@@ -15,7 +15,7 @@ const Register = React.lazy(() => import('./components/register'));
 
 const Root: React.FC = () => {
   return (
-    <ApolloProvider client={apolloClient}>
+    <ApolloProvider client={getApolloClient()}>
       <MaterialThemeProvider theme={createCustomTheme()}>
         <ThemeProvider>
           <Suspense fallback={<Loader />}>
