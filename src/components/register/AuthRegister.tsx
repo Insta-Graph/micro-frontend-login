@@ -122,7 +122,7 @@ const AuthRegister: React.FC = () => {
             authService.setAccessTokenExpiration(response.data.registerUser.auth.expiresIn);
             authService.setUser(response.data.registerUser.user);
             localStorage.setItem('userData', JSON.stringify(response.data.registerUser.user));
-            navigate('/');
+            navigate('/feed');
           }
         }}
       >

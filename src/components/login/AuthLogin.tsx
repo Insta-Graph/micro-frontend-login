@@ -117,7 +117,7 @@ const AuthRegister: React.VFC = () => {
             authService.setAccessTokenExpiration(response.data.login.auth.expiresIn);
             authService.setUser(response.data.login.user);
             localStorage.setItem('userData', JSON.stringify(response.data.login.user));
-            navigate('/');
+            navigate('/feed');
           }
           if (checked) {
             window.localStorage.setItem('email', values.email);
