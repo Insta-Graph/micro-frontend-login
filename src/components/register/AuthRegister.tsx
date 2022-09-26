@@ -112,9 +112,10 @@ const AuthRegister: React.FC = () => {
           agreeWithTerms: Yup.bool().oneOf([true], 'You have to agree with terms and conditions'),
         })}
         onSubmit={async (values): Promise<void> => {
+          const { email, password, firstName, lastName } = values;
           const response = await registerUser({
             variables: {
-              input: { ...values },
+              input: { email, password, firstName, lastName },
             },
           });
           if (response.data?.registerUser.__typename === 'AuthData') {

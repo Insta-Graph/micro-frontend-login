@@ -15,8 +15,8 @@ const Root: React.FC = () => {
           <Suspense fallback={<Loader />}>
             <Router basepath="/auth">
               <Redirect from="/" to="/auth/sign-in" />
-              <Login path="/sign-in" />
               <Register path="/sign-up" />
+              <Login default />
             </Router>
           </Suspense>
         </ThemeProvider>
