@@ -1,3 +1,10 @@
+## [1.1.7](https://github.com/Insta-Graph/micro-frontend-login/compare/v1.1.6...v1.1.7) (2022-09-26)
+
+
+### Bug Fixes
+
+* set login component as default root to avoid 404 ([65e334f](https://github.com/Insta-Graph/micro-frontend-login/commit/65e334f583640ea83074e403f291056db24a7346))
+
 ## [1.1.6](https://github.com/Insta-Graph/micro-frontend-login/compare/v1.1.5...v1.1.6) (2022-09-24)
 
 
