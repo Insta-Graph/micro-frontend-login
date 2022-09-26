@@ -1,3 +1,10 @@
+## [1.1.8](https://github.com/Insta-Graph/micro-frontend-login/compare/v1.1.7...v1.1.8) (2022-09-26)
+
+
+### Bug Fixes
+
+* handle errors with common error boundary ([3927726](https://github.com/Insta-Graph/micro-frontend-login/commit/39277263aff0d4dec5c39c49949f9a2dba1f278e))
+
 ## [1.1.7](https://github.com/Insta-Graph/micro-frontend-login/compare/v1.1.6...v1.1.7) (2022-09-26)
 
 
