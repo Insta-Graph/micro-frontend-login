@@ -1,3 +1,11 @@
+# [1.2.0](https://github.com/Insta-Graph/micro-frontend-login/compare/v1.1.9...v1.2.0) (2022-10-06)
+
+
+### Features
+
+* forgot password view ([a23bc29](https://github.com/Insta-Graph/micro-frontend-login/commit/a23bc290fee3ae12ac50c6d662cede437988bca5))
+* reset password view ([44d77c3](https://github.com/Insta-Graph/micro-frontend-login/commit/44d77c3ef06ad401f896013f47b4dbd1e851aa90))
+
 ## [1.1.9](https://github.com/Insta-Graph/micro-frontend-login/compare/v1.1.8...v1.1.9) (2022-10-06)
 
 
