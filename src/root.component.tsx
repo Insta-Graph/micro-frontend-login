@@ -13,6 +13,7 @@ import {
 const Login = React.lazy(() => import('./components/login'));
 const Register = React.lazy(() => import('./components/register'));
 const ForgotPassword = React.lazy(() => import('./components/forgotPassword'));
+const ResetPassword = React.lazy(() => import('./components/resetPassword'));
 
 const Root: React.FC = () => {
   return (
@@ -25,6 +26,7 @@ const Root: React.FC = () => {
                 <Redirect from="/" to="/auth/sign-in" />
                 <Register path="/sign-up" />
                 <ForgotPassword path="/forgot-password" />
+                <ResetPassword path="/reset-password/:token" />
                 <Login default />
               </Router>
             </Suspense>
